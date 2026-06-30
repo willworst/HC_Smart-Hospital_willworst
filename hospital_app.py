@@ -248,7 +248,7 @@ if submitted:
     }])
 
     patient_scaled = patient.copy()
-    patient_scaled[cols_to_scale] = scaler.transfrom(patient[cols_to_scale])
+    patient_scaled[cols_to_scale] = scaled.transfrom(patient[cols_to_scale])
 
     pred        = model.predict(patient_scaled[features])[0]
     proba       = model.predict_proba(patient_scaled[features])[0]
